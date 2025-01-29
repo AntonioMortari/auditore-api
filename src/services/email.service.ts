@@ -14,7 +14,7 @@ export class EmailService {
       host: smtp,
       port: parseInt(port, 10),
       auth: {
-        user: configuration.email.recipient || 'apikey',
+        user: 'apikey',
         pass: apiKey,
       },
     } as TransportOptions);
