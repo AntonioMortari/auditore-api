@@ -22,6 +22,7 @@ export class ContactController {
 
       return {
         success: false,
+        message: err?.message,
       };
     }
   }

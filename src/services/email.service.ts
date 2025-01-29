@@ -31,8 +31,9 @@ export class EmailService {
           dto.to
         } successfully. Result: ${JSON.stringify(result)}`,
       );
-    } catch (error) {
-      this.logger.error(`Error to send email: ${error}`);
+    } catch (err) {
+      this.logger.error(`Error to send email: ${err}`);
+      throw new Error(err);
     }
   }
 }
